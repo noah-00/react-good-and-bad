@@ -2,10 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 
-type PostType = null | { title: string; body: string };
+type PostType = { title: string; body: string };
 
 export default function Page() {
-  const [post, setPost] = useState<PostType>(null);
+  const [post, setPost] = useState<PostType | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
